@@ -47,10 +47,10 @@ gulp.task('optimize-svg', function () {
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('src/pages/**/*.+(html|nunjucks)')
+  return gulp.src('src/_pages/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
   .pipe(nunjucksRender({
-      path: ['src/templates']
+      path: ['src/_templates']
     }))
   // output files in app folder
   .pipe(gulp.dest('app'))
